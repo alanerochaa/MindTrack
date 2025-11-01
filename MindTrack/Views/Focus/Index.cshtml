@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MindTrack.Models.FocusRecord>
+
+<h2>🧠 MindTrack – Sessões de Foco</h2>
+
+@if (TempData["ok"] != null)
+{
+    <div class="alert alert-success">@TempData["ok"]</div>
+}
+
+<p>
+    <a class="btn btn-success" asp-action="Create">+ Nova Sessão</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Início</th>
+            <th>Fim</th>
+            <th>Duração (min)</th>
+            <th>Humor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.Inicio.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@s.Fim.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@s.DuracaoMinutos</td>
+                <td>@s.Humor</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-controller="Tasks" asp-action="Index" class="btn btn-outline-secondary">Ir para TaskHub</a>
+</p>

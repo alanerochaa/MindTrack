@@ -1,0 +1,44 @@
+﻿@model MindTrack.Models.TaskItem
+@using MindTrack.Models.Enums
+
+@{
+    ViewData["Title"] = "Editar Tarefa";
+}
+
+<h2 class="mb-4">✏️ Editar Tarefa</h2>
+
+<form asp-action="Edit" method="post" class="border rounded p-4 shadow-sm bg-light">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label asp-for="Titulo" class="form-label fw-bold"></label>
+        <input asp-for="Titulo" class="form-control" />
+        <span asp-validation-for="Titulo" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Descricao" class="form-label fw-bold"></label>
+        <textarea asp-for="Descricao" class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Prioridade" class="form-label fw-bold"></label>
+        <select asp-for="Prioridade" class="form-select" asp-items="Html.GetEnumSelectList<Priority>()"></select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Status" class="form-label fw-bold"></label>
+        <select asp-for="Status" class="form-select" asp-items="Html.GetEnumSelectList<MindTrack.Models.Enums.TaskStatus>()"></select>
+    </div>
+
+    <div class="d-flex justify-content-between">
+        <a asp-action="Index" class="btn btn-secondary">↩️ Cancelar</a>
+        <button type="submit" class="btn btn-success">✅ Salvar Alterações</button>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

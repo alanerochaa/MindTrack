@@ -1,0 +1,20 @@
+﻿@model MindTrack.Models.TaskItem
+
+@{
+    ViewData["Title"] = "Excluir Tarefa";
+}
+
+<h2>❌ Excluir Tarefa</h2>
+
+<h4>Tem certeza que deseja excluir esta tarefa?</h4>
+<div class="alert alert-warning">
+    <strong>@Model.Titulo</strong>
+    <p>@Model.Descricao</p>
+    <p><b>Prioridade:</b> @Model.Prioridade | <b>Status:</b> @Model.Status</p>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

@@ -1,0 +1,26 @@
+﻿@model MindTrack.Models.FocusRecord
+
+<h2>🧘‍♀️ Registrar Sessão de Foco</h2>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="Inicio" class="form-label"></label>
+        <input asp-for="Inicio" type="datetime-local" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Fim" class="form-label"></label>
+        <input asp-for="Fim" type="datetime-local" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Humor" class="form-label"></label>
+        <select asp-for="Humor" class="form-select">
+            <option>Motivado</option>
+            <option>Neutro</option>
+            <option>Cansado</option>
+            <option>Distraído</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar Sessão</button>
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+</form>
