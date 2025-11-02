@@ -35,7 +35,7 @@ namespace MindTrack.Repositories
                 Titulo = "Implementar FocusController",
                 Descricao = "Criar controle de sessões de foco e integrar com as Views.",
                 Prioridade = Priority.Alta,
-                Status = TaskStatusEnum.EmProgresso
+                Status = TaskStatusEnum.EmAndamento
             },
             new TaskItem
             {
@@ -43,7 +43,7 @@ namespace MindTrack.Repositories
                 Titulo = "Ajustar layout do TaskHub",
                 Descricao = "Aplicar o tema lavanda CodeGirls e padronizar botões e tabelas.",
                 Prioridade = Priority.Media,
-                Status = TaskStatusEnum.EmProgresso
+                Status = TaskStatusEnum.EmAndamento
             },
             new TaskItem
             {
@@ -59,7 +59,7 @@ namespace MindTrack.Repositories
                 Titulo = "Testar API de Foco",
                 Descricao = "Executar testes no Postman e validar rotas e respostas JSON.",
                 Prioridade = Priority.Media,
-                Status = TaskStatusEnum.EmProgresso
+                Status = TaskStatusEnum.EmAndamento
             },
             new TaskItem
             {
@@ -83,7 +83,7 @@ namespace MindTrack.Repositories
                 Titulo = "Adicionar validações nas Views",
                 Descricao = "Garantir que campos obrigatórios estejam validados no front-end.",
                 Prioridade = Priority.Media,
-                Status = TaskStatusEnum.EmProgresso
+                Status = TaskStatusEnum.EmAndamento
             },
             new TaskItem
             {

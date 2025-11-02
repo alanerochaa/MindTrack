@@ -1,4 +1,4 @@
-namespace MindTrack.Models
+namespace MindTrack.Presentation.Models
 {
     public class ErrorViewModel
     {

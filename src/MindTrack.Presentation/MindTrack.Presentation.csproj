@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\MindTrack.Application\MindTrack.Application.csproj" />
+    <ProjectReference Include="..\MindTrack.Infrastructure\MindTrack.Infrastructure.csproj" />
+    <ProjectReference Include="..\MindTrack.Domain\MindTrack.Domain.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>
